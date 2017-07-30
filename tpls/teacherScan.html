@@ -1,0 +1,37 @@
+<div class="modal fade" id="teacherInfoContainer" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">讲师信息</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default">
+		  <div class="panel-body">  
+
+		    <p><strong>讲师头像：</strong> <span>{{tc_avatar}}</span></p>
+		    <p><strong>讲师ID：</strong> <span>{{tc_id}}</span></p>
+		    <p><strong>讲师姓名：</strong> <span>{{tc_name}}</span></p>
+            <p><strong>昵称：</strong> <span>{{tc_roster}}</span></p>
+            <p><strong>讲师密码：</strong> <span>{{tc_pass}}</span></p>
+            <p><strong>讲师状态：</strong> <span>{{tc_status=0?'注销':'启用'}}</span></p>
+            <p><strong>生日：</strong> <span>{{tc_birthday}}</span></p>
+            <p><strong>家乡：</strong> <span>{{tc_hometown}}</span></p>
+
+            <p><strong>性别：</strong> <span>{{tc_gender=0?'男':'女'}}</span></p>
+            <p><strong>电话：</strong> <span>{{tc_cellphone}}</span></p>
+            <p><strong>邮箱：</strong> <span>{{tc_email}}</span></p>
+            <p><strong>入职日期：</strong> <span>{{tc_join_date}}</span></p>
+            <p><strong>介绍：</strong> <span>{{tc_introduce}}</span></p>
+  
+		  </div>
+		</div>
+      </div>
+
+       <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+
+      </div>
+    </div>
+  </div>
+</div>

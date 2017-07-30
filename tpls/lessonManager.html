@@ -1,0 +1,40 @@
+<div class="lessonManagerContainer">
+<ol class="breadcrumb">
+  <li><a href="#">课程管理</a></li>
+  <li class="active">课时管理</li>
+</ol>
+ <div class="row" >
+            <div class="col-md-1 col-md-offset-10">
+                <button  class="btn btn-success addlessons" id="btnAddLessons">添加课时</button>
+            </div>
+ </div>
+	<table class="table table-bordered">
+	
+		<thead>
+			<tr>
+				<th>编号</th>
+                <th>名称</th>
+                <th>时长</th>
+                <th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+<!-- 		<tr>
+				<td>waqe</td>
+				<td>qwe</td>
+				<td>qwe</td>
+				<td><button class="btn btn-success btn-sm">编辑</button></td>
+
+			</tr> -->
+	{{each result.lessons v}}		
+			<tr>
+				<td>{{v.ct_id}}</td>
+				<td>{{v.ct_name}}</td>
+				<td>{{v.ct_video_duration}}</td>
+				<td><button ct-id='{{v.ct_id}}' class="btn btn-success btn-sm btn-edit-lesson">编辑</button></td>
+
+			</tr>
+    {{/each}}       
+		</tbody>
+	</table>
+</div>

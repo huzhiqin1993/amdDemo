@@ -1,0 +1,62 @@
+
+
+<ol class="breadcrumb">
+  <li><a href="#">课程分类</a></li>
+  <li class="active">课程列表</li>
+</ol>
+ <div class="row" id="btnAdd">
+            <div class="col-md-1 col-md-offset-10">
+                <button  class="btn btn-success addCategroy">添加分类</button>
+            </div>
+ </div>
+
+	<table class="table ">
+	
+		<thead>
+			<tr>
+				<th>分类名称</th>
+                <th>课程数量</th>
+                <th>是否显示</th>
+                <th>排序</th>
+                <th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- <tr>
+				<td>waqe</td>
+				<td>qwe</td>
+				<td>qwe</td>
+				<td>qwrqw</td>
+				<td>qweq</td>
+			</tr> -->
+           {{each result val}}
+
+			{{if(val.cg_pid!=0)}}
+		<!-- 	<tr class="active"> -->
+		<tr class="">
+				<td>{{val.cg_name}}</td>
+				<td>{{val.total}}</td>
+				<td>{{val.cg_is_hide}}</td>
+				<td>{{val.cg_order}}</td>
+				<td ><button cg-id='{{val.cg_id}}' class="btn btn-success btn-sm btn-edit">编辑</button></td>
+			</tr>
+
+			   <!-- {{each result v}}
+
+				{{if(v.cg_pid==val.cg_id)}}
+				<tr>
+					<td>{{v.cg_name}}</td>
+					<td>{{v.total}}</td>
+					<td>{{v.cg_is_hide}}</td>
+					<td>{{v.cg_order}}</td>
+					<td><button cg-id='{{v.cg_id}}' class="btn btn-success btn-sm btn-edit">编辑</button></td>
+				</tr>
+				{{/if}}
+
+			   {{/each}} -->
+			{{/if}}
+
+		   {{/each}}
+		</tbody>
+	</table>

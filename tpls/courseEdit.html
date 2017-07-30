@@ -1,0 +1,107 @@
+<div id="courseEditContainer">
+
+<ol class="breadcrumb">
+  <li><a href="#">课程管理</a></li>
+  <li class="active">课程编辑</li>
+</ol>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		    <div class="media">
+			  <div class="media-left">
+			    <a href="#">
+			      <img class="media-object" src="{{cs_cover}}" alt="">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			    <h3 class="media-heading">{{cs_name}}</h3>
+			    <p>————讲师:{{tc_name}}</p>
+			    <p>————标签:{{cs_tags}}</p>
+		
+			  </div>
+		     </div>
+		  </div>
+		</div>
+
+        <div class="panel panel-default">
+		  <div class="panel-body">
+
+		    <form class="form-horizontal">
+
+			  <div class="form-group">
+			    <label  class="col-sm-2 control-label">课程名称</label>
+			    <div class="col-sm-10">
+			    <input type="hidden" value="{{cs_id}}"  name="cs_id">
+			      		     
+			      <input type="text" value="{{cs_name}}"  name="cs_name" class="form-control">
+			    </div>
+			  </div>
+			 
+	          <div class="form-group">
+			    <label  class="col-sm-2 control-label">课程描述</label>
+			    <div class="col-sm-10">
+			     <textarea class="form-control" name="cs_brief" rows="5">{{cs_brief}}</textarea>
+			    </div>
+			  </div>
+
+            <div class="form-group">
+            <label  class="col-sm-2 control-label">讲师</label>
+		    <div class="col-sm-10">
+		     <select name="cs_tc_id " class="form-control">
+		    
+		     {{each teacher v}}  
+		     {{if cs_tc_id==v.tc_id}}
+               <option value="{{v.tc_id}}" selected="selected">{{v.tc_name}}</option>
+		      {{else}}
+			    <option value="{{v.tc_id}}">{{v.tc_name}}</option>
+			  {{/if}}
+			 {{/each}}
+		   	 </select>
+		    </div>
+		    </div>
+
+            <div class="form-group">
+            <label  class="col-sm-2 control-label">分类</label>
+		    <div class="col-sm-4">
+		     <select  class="form-control">
+             {{each category.top val i}}
+		     {{if i <=100}}
+                {{if cs_cg_pid==val.cg_id}}
+		        <option value="{{val.cg_id}}" selected="selected">{{val.cg_name}}</option>
+                {{else}}
+			    <option value="{{val.cg_id}}">{{val.cg_name}}</option>
+			    {{/if}}
+             {{/if}}
+			 {{/each}}
+		   	 </select>
+		    </div>
+		    <div class="col-sm-4">
+		     <select name="cs_cg_id" class="form-control">
+                 {{each category.childs va}}
+			     {{if cs_cg_id==va.cg_id}}
+			     <option value="{{va.cg_id}}" selected="selected">{{va.cg_name}}</option>
+			     {{else}}
+			     <option value="{{va.cg_id}}">{{va.cg_name}}</option>
+			     {{/if}}
+			    
+                 {{/each}}
+		   	 </select>
+		    </div>
+		    </div>
+		
+             <div class="form-group">
+			    <label  class="col-sm-2 control-label">课程标签</label>
+			    <div class="col-sm-10">
+			     <input type="text" value="{{cs_tags}}" name="cs_tags" class="form-control">
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <div class="col-sm-offset-10 col-sm-2">
+			      <button  type="submit" class="btn btn-primary">确定</button>
+			    </div>
+			  </div>
+			</form>
+		  </div>
+		</div>
+     </div>  
+ 

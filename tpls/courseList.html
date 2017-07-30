@@ -1,0 +1,42 @@
+
+<div class="courseListContainer">
+<ol class="breadcrumb">
+  <li><a href="#">课程管理</a></li>
+  <li class="active">课程列表</li>
+</ol>
+<div class="row" style="margin:0">
+            <div class="col-md-1 col-md-offset-10">
+                <button  class="btn btn-success addCourse">添加课程</button>
+            </div>
+ </div>
+
+  <ul class="list-group">
+  <div class="row" style="margin:0">
+  {{each result v i}}
+  {{if i <=29}}
+  
+	  <li class=" col-md-6 list-group-item">
+	  	<div class="media">
+		  <div class="media-left">
+		    <a href="#">
+		      <img class="media-object" width="240" height="130" src="{{v.cs_cover}}" alt="">
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h3 class="media-heading">{{v.cs_name}} </h3>
+		    
+		    <p>———讲师：{{v.tc_name}}</p>
+		    <p>———分类：{{v.cg_name}}</p>
+		   <p><button cs-id='{{v.cs_id}}'  class="btn btn-primary btn-sm btn-edit-lesson">编辑课时</button> <button class="btn btn-success btn-edit-course btn-sm">编辑信息</button> <button cs-id='{{v.cs_id}}' class="btn btn-info updateimg btn-sm">更新图片</button></p>
+		  </div>
+		</div>
+	  </li>
+	  
+	{{/if}} 
+	{{/each}} 	    
+	</div> 
+
+  </ul>
+
+
+</div>

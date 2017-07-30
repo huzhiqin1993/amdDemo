@@ -1,0 +1,70 @@
+<div class="modal fade" id="editTeacherContainer" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">编辑讲师</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+		  <div class="form-group">
+		    <label  class="col-sm-2 control-label">讲师姓名</label>
+		    <div class="col-sm-10">
+		      <input type="hidden" value="{{tc_id}}" name="tc_id" >
+		      <input type="text" name="tc_name" value="{{tc_name}}" class="form-control">
+		    </div>
+		  </div>
+		 
+
+		   <div class="form-group">
+		    <label  class="col-sm-2 control-label">入职日期</label>
+		    <div class="col-sm-10">
+		      <input name="tc_join_date" id="editteacherpicker"  value="{{tc_join_date}}" type="text" class="form-control">
+		    </div>
+		  </div>
+
+		   <div class="form-group">
+		    <label  class="col-sm-2 control-label">讲师类型</label>
+		    <div class="col-sm-10">
+		     <select name="tc_type" class="form-control">
+			 {{if tc_type==0}}
+			  <option value="1">普通</option>
+			  <option value="0" selected="selected">管理员</option>
+			 {{else}}
+			  <option value="0">管理员</option>
+              <option value="1" selected="selected">普通</option>
+			 {{/if}}
+		   	 </select>
+		    </div>
+		  </div>
+
+		   <div class="form-group">
+		    <label  class="col-sm-2 control-label">讲师性别</label>
+		    {{if tc_gender==0}}
+               <label class="radio-inline">
+				  <input type="radio"  name="tc_gender" value="1"> 女
+				</label>
+				<label class="radio-inline" >
+				  <input type="radio" name="tc_gender" value="0" checked> 男
+				</label>
+             {{else}}
+                 <label class="radio-inline">
+				  <input type="radio"  name="tc_gender" value="1" checked> 女
+				</label>
+				<label class="radio-inline" >
+				  <input type="radio" name="tc_gender" value="0" > 男
+				</label>
+             {{/if}}
+		  </div>
+  
+		  <div class="form-group">
+		    <div class="col-sm-offset-10 col-sm-2">
+		      <button id="btnAddCategroy" type="submit" class="btn btn-primary">提交</button>
+		    </div>
+		  </div>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+

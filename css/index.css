@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+}
+.content-left {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: lightblue;
+}
+.content-left .profile {
+  padding-top: 50px;
+  width: 100%;
+}
+.content-left .profile .img-box {
+  margin: 0px auto;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.content-left .profile .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.content-left .profile p {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 15px;
+}
+.content-left #list {
+  padding: 0;
+}
+.content-left #list li {
+  cursor: pointer;
+  text-align: center;
+}
+.content-left #list .tea-list {
+  width: 100%;
+}
+.content-left #list .tea-list li {
+  text-align: right;
+}
+.content-right {
+  position: absolute;
+  left: 200px;
+  right: 0;
+  top: 0;
+  min-height: 600px;
+}
+.content-right .panel .btn span {
+  font-size: 18px;
+}
+.content-right .userCenter {
+  margin-top: 10px;
+}
+.content-right .userCenter a {
+  color: #333;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.panel {
+  margin: 0;
+}
+.panel .panel-body {
+  margin: 0;
+}
+.table th {
+  text-align: center;
+}
+.table td {
+  text-align: center;
+}
+#btnAdd {
+  margin: 0;
+}
+.content-left .list-group .list-group-item {
+  text-align: center;
+}
+#btnLessonManager,
+#btnCouserEdit {
+  text-align: right;
+  padding-right: 20%;
+}
